@@ -1,19 +1,26 @@
+---
+import { getI18N } from "@/i18n/"
+
+const { currentLocale } = Astro
+const i18n = getI18N({ currentLocale })
+---
+
 <div class="w-full relative">
   <img
     class="absolute top-10 z-10 w-[1000px] left-0 right-0 m-auto"
-    alt="Esland - Premios a la comunidad hispanohablante de Streaming"
+    alt={i18n.VIDEO_ALT}
     src="/logo-home.svg"
   />
   <video
     class="w-full h-screen object-cover object-top animate-ease-in-out animate-fade animate-duration-1000 cp-v"
-    src="/video.mp4"
+    src="/video.webm"
     autoplay
     loop
     muted
   ></video>
   <video
     class="absolute -bottom-48 blur-3xl -z-40"
-    src="/video.mp4"
+    src="/video.webm"
     autoplay
     loop
     muted></video>
